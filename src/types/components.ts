@@ -1,5 +1,3 @@
-import type { RichText } from "./contentful";
-
 // Navigaton
 
 export interface Route {
@@ -32,11 +30,37 @@ export interface HeroProps {
   image: Image;
 }
 
+// Recent Posts
+
+export interface RecentPostsProps {
+  recent: RecentPostItemProps[];
+}
+
+export interface RecentPostItemProps {
+  title: string;
+  publishDate: string;
+  slug: string;
+  category: string;
+}
+
+// Blurb
+
+export interface BlurbProps {
+  blurb: BlurbItemProps;
+}
+
+export interface BlurbItemProps {
+  text: PostBody;
+}
+
 // About
 
 export interface AboutProps {
+  about: AboutItemProps;
+}
+export interface AboutItemProps {
   title: string;
-  body: RichText;
+  body: PostBody;
   image: Image;
 }
 

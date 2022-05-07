@@ -1,6 +1,6 @@
 // Types
 import type {
-  WorkItem,
+  WorkProps,
   AboutProps,
   Project,
   HeroProps,
@@ -40,7 +40,7 @@ const getEducation = async (): Promise<any[]> => {
   return data.educationCollection.items;
 };
 
-const getWork = async (): Promise<WorkItem[]> => {
+const getWork = async (): Promise<WorkProps[]> => {
   const query = gql`
     {
       workCollection(order: date_DESC) {
@@ -70,7 +70,9 @@ const getAbout = async (): Promise<AboutProps> => {
         image {
           title
           description
-          url(transform: { format: WEBP, width: 150, height: 150 })
+          url(
+            transform: { format: WEBP, width: 1000, height: 1000, quality: 100 }
+          )
         }
       }
     }
@@ -79,6 +81,22 @@ const getAbout = async (): Promise<AboutProps> => {
   const data = await client.request(query);
 
   return data.aboutSection;
+};
+
+const getBlurb = async (): Promise<any> => {
+  const query = gql`
+    {
+      blurb(id: "5sgiynOSAtCoijNd9vjhRh") {
+        text {
+          json
+        }
+      }
+    }
+  `;
+
+  const data = await client.request(query);
+
+  return data.blurb;
 };
 
 const getProjects = async (): Promise<Project[]> => {
@@ -225,9 +243,26 @@ const getPost = async (slug: string | string[]): Promise<Post> => {
   return data.blogPostCollection.items[0];
 };
 
-// function to render rich text
+const getRecentPosts = async (): Promise<Post[]> => {
+  const query = gql`
+    query getPost {
+      blogPostCollection(order: sys_firstPublishedAt_DESC, limit: 6) {
+        items {
+          title
+          publishDate
+          slug
+          category
+        }
+      }
+    }
+  `;
+  const data = await client.request(query);
+
+  return data.blogPostCollection.items;
+};
 
 export {
+  getBlurb,
   getEducation,
   getWork,
   getAbout,
@@ -235,6 +270,7 @@ export {
   getContact,
   getHero,
   getPosts,
+  getRecentPosts,
   getSlugs,
   getPost,
 };
