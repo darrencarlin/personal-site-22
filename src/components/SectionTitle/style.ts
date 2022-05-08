@@ -9,7 +9,7 @@ export const SectionTitleContainer = styled.h2`
     display: block;
     width: 50px;
     padding: 0 0 10px;
-    border-bottom: 2px solid #2b2b2b;
+    border-bottom: 2px solid #ffffff;
     transition: all 0.2s ease-in-out;
   }
 `;

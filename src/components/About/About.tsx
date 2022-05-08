@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Navigation from "components/Navigation";
 import Section from "components/Section";
 import Wrapper from "components/Wrapper";
 import React from "react";
@@ -29,6 +30,7 @@ const About = ({ about }: AboutProps) => {
   return (
     <Section>
       <Wrapper maxWidth={800}>
+        <Navigation />
         {documentToReactComponents(json, options)}
         <Avatar src={url} alt={description} loading="lazy" decoding="async" />
       </Wrapper>

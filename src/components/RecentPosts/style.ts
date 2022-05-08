@@ -4,19 +4,25 @@ import styled from "styled-components";
 export const Post = styled.article`
   display: flex;
   justify-content: space-between;
+  padding: 0.4rem 1rem;
+  border-radius: 0.3125rem;
+  :hover {
+    background-color: ${({ theme }) => theme.colors.bgHover};
+    a,
+    p {
+      color: ${({ theme }) => theme.colors.white};
+    }
+  }
 `;
+
 export const Title = styled(Link)``;
 
 export const Anchor = styled.a`
   font-weight: 400;
-  margin: 0 0 20px;
-  max-width: 600px;
+
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  :hover {
-    text-decoration: underline;
-  }
 `;
 export const Category = styled.p`
   color: #6e6e6e;
+  margin: 0;
 `;

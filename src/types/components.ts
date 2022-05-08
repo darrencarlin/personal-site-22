@@ -126,6 +126,9 @@ export interface PostBody {
 }
 export interface Post {
   title: string;
-  body: PostBody;
+  slug: string;
+  description: string;
   publishDate: string;
+  category: string;
+  body: PostBody;
 }

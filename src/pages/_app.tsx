@@ -4,9 +4,13 @@ import { ThemeProvider } from "styled-components";
 import App from "next/app";
 import Layout from "components/Layout";
 
-const theme = {
+export const theme = {
   colors: {
-    font: "#333333",
+    text: "#333333",
+    blue: "#05c0e3",
+    white: "#ffffff",
+    bgHover: "#3f3f44",
+    bg: "#282c34",
   },
 };
 

@@ -1,16 +1,38 @@
 import styled from "styled-components";
 
+export const WorkContainer = styled.div`
+  height: 100%;
+  padding: 25px;
+`;
+
 export const WorkItems = styled.div`
+  margin: 0 0 2.5rem 0;
   @media screen and (min-width: 768px) {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 `;
 
 export const WorkItemContainer = styled.div`
-  margin: 0 0 25px 0;
+  margin: 0 0 0.625rem 0;
+`;
+
+export const Top = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+export const Bottom = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const Company = styled.p`

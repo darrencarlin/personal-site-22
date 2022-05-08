@@ -9,6 +9,8 @@ export const SectionContainer = styled.section<SectionContainerProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   color: ${({ color }) => color};
   padding: 25px;
+  max-width: 800px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     padding: 50px;

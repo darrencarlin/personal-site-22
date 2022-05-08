@@ -1,13 +1,24 @@
 import { WorkItemProps } from "types/components";
-import { Company, Date, Location, Title, WorkItemContainer } from "./style";
+import {
+  Bottom,
+  Company,
+  Date,
+  Location,
+  Title,
+  Top,
+  WorkItemContainer,
+} from "./style";
 
 const WorkItem = ({ company, title, location, date }: WorkItemProps) => {
   return (
     <WorkItemContainer>
-      <Company>{company}</Company>
-      <Title>{title}</Title>
-      <Location>{location}</Location>
-      <Date>{date}</Date>
+      <Top>
+        <Company>{company}</Company> <Date>{date}</Date>
+      </Top>
+      <Bottom>
+        <Title>{title}</Title>
+        <Location>{location}</Location>
+      </Bottom>
     </WorkItemContainer>
   );
 };

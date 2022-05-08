@@ -1,8 +1,9 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Navigation from "components/Navigation";
 import Wrapper from "components/Wrapper";
 import { BlurbProps } from "types/components";
-import { BlurbContainer, Text } from "./style";
+import { BlurbContainer, Content, Text } from "./style";
 
 const Blurb = ({ blurb }: BlurbProps) => {
   const {
@@ -22,8 +23,9 @@ const Blurb = ({ blurb }: BlurbProps) => {
   const options = renderOptions();
   return (
     <BlurbContainer>
-      <Wrapper maxWidth={1200}>
-        {documentToReactComponents(json, options)}
+      <Wrapper maxWidth={800}>
+        <Navigation />
+        <Content>{documentToReactComponents(json, options)}</Content>
       </Wrapper>
     </BlurbContainer>
   );
