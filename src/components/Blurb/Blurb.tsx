@@ -23,8 +23,7 @@ const Blurb = ({ blurb }: BlurbProps) => {
   const options = renderOptions();
   return (
     <BlurbContainer>
-      <Wrapper maxWidth={800}>
-        <Navigation />
+      <Wrapper maxWidth={900}>
         <Content>{documentToReactComponents(json, options)}</Content>
       </Wrapper>
     </BlurbContainer>

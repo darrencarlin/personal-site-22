@@ -3,13 +3,12 @@ import { SectionContainer } from "./style";
 interface SectionProps {
   children: React.ReactNode;
   backgroundColor?: string;
-  color?: string;
   id?: string;
 }
 
-const Section = ({ id, children, backgroundColor, color }: SectionProps) => {
+const Section = ({ id, backgroundColor, children }: SectionProps) => {
   return (
-    <SectionContainer id={id} backgroundColor={backgroundColor} color={color}>
+    <SectionContainer id={id} backgroundColor={backgroundColor}>
       {children}
     </SectionContainer>
   );

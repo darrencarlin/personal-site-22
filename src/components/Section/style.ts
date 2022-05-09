@@ -8,19 +8,13 @@ interface SectionContainerProps {
 export const SectionContainer = styled.section<SectionContainerProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   color: ${({ color }) => color};
-  padding: 25px;
-  max-width: 800px;
   margin: 0 auto;
-
-  @media (min-width: 768px) {
-    padding: 50px;
-  }
-
+  padding: 40px 0;
   :hover {
     h2:after {
       content: "";
       display: block;
-      width: 75px;
+      width: 50px;
       padding: 0 0 10px;
       border-bottom: 2px solid #0093af;
     }

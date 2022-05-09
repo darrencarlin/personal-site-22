@@ -66,13 +66,25 @@ const getAbout = async (): Promise<AboutProps> => {
         title
         body {
           json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url(transform: { format: WEBP, quality: 100 })
+                title
+                width
+                height
+                description
+              }
+            }
+          }
         }
         image {
           title
           description
-          url(
-            transform: { format: WEBP, width: 1000, height: 1000, quality: 100 }
-          )
+          url(transform: { format: WEBP, quality: 100 })
         }
       }
     }

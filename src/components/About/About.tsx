@@ -2,39 +2,59 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Navigation from "components/Navigation";
-import Section from "components/Section";
 import Wrapper from "components/Wrapper";
+import Image from "next/image";
 import React from "react";
 import { AboutProps } from "types/components";
-import { Avatar } from "./style";
+import { AboutContainer, Avatar, ImageWrapper } from "./style";
 
 const About = ({ about }: AboutProps) => {
   const {
     title,
-    body: { json },
+    body: { json, links },
     image: { description, url },
   } = about;
 
-  const renderOptions = () => {
+  const renderOptions = (links: any) => {
+    const assetMap = new Map();
+
+    for (const asset of links.assets.block) {
+      assetMap.set(asset.sys.id, asset);
+    }
+
     return {
       renderNode: {
         [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
           return <p>{children}</p>;
         },
+
+        [BLOCKS.EMBEDDED_ASSET]: (node: any, next: any) => {
+          const asset = assetMap.get(node.data.target.sys.id);
+
+          return (
+            <ImageWrapper>
+              <Image
+                layout="responsive"
+                src={asset.url}
+                alt="My image alt text"
+                width={asset.width}
+                height={asset.height}
+              />
+            </ImageWrapper>
+          );
+        },
       },
     };
   };
 
-  const options = renderOptions();
+  const options = renderOptions(links);
 
   return (
-    <Section>
-      <Wrapper maxWidth={800}>
-        <Navigation />
+    <AboutContainer>
+      <Wrapper maxWidth={900}>
         {documentToReactComponents(json, options)}
-        <Avatar src={url} alt={description} loading="lazy" decoding="async" />
       </Wrapper>
-    </Section>
+    </AboutContainer>
   );
 };
 

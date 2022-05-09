@@ -1,21 +1,22 @@
-import Navigation from "components/Navigation";
+import Section from "components/Section";
+import SectionTitle from "components/SectionTitle";
 import Wrapper from "components/Wrapper";
 import { WorkItemProps, WorkProps } from "types/components";
-import { WorkContainer, WorkItems } from "./style";
+import { WorkItems } from "./style";
 import WorkItem from "./WorkItem";
 
 const Work = ({ work }: WorkProps) => {
   return (
-    <WorkContainer>
-      <Wrapper maxWidth={800}>
+    <Section id="work" backgroundColor="#f9f9f9">
+      <Wrapper maxWidth={900}>
+        <SectionTitle title="Work" />
         <WorkItems>
           {work.map((item: WorkItemProps, index: number) => (
             <WorkItem {...item} key={index} />
           ))}
         </WorkItems>
-        <Navigation />
       </Wrapper>
-    </WorkContainer>
+    </Section>
   );
 };
 

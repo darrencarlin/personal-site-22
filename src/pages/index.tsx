@@ -1,14 +1,23 @@
 import Blurb from "components/Blurb";
+import Education from "components/Education";
+import Work from "components/Work";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
-import { BlurbItemProps } from "types/components";
-import { getBlurb } from "utils/contentful";
+import {
+  BlurbItemProps,
+  EducationItemProps,
+  WorkItemProps,
+  WorkProps,
+} from "types/components";
+import { getBlurb, getEducation, getWork } from "utils/contentful";
 
 export interface HomePageProps {
   blurb: BlurbItemProps;
+  work: WorkItemProps[];
+  education: EducationItemProps[];
 }
 
-const Home = ({ blurb }: HomePageProps) => {
+const Home = ({ blurb, work, education }: HomePageProps) => {
   return (
     <>
       <Head>
@@ -17,6 +26,8 @@ const Home = ({ blurb }: HomePageProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Blurb blurb={blurb} />
+      <Work work={work} />
+      <Education education={education} />
     </>
   );
 };
@@ -25,6 +36,7 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const blurb = await getBlurb();
-
-  return { props: { blurb } };
+  const work = await getWork();
+  const education = await getEducation();
+  return { props: { blurb, work, education } };
 };

@@ -24,8 +24,7 @@ interface BlogProps {
 const Blog = ({ total, posts }: BlogProps) => {
   return (
     <BlogContainer>
-      <Wrapper maxWidth={800}>
-        <Navigation />
+      <Wrapper maxWidth={900}>
         {posts.map((post: Post) => (
           <Link key={post.title} href={`/blog/${post.slug}`} passHref>
             <Anchor>

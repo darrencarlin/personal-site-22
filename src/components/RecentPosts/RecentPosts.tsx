@@ -7,7 +7,7 @@ import { Anchor, Category, Post, Title } from "./style";
 const RecentPosts = ({ recent }: RecentPostsProps) => {
   return (
     <Section>
-      <Wrapper maxWidth={800}>
+      <Wrapper maxWidth={900}>
         <SectionTitle title="Recent Posts" />
         {recent.map((post) => (
           <Post key={post.title}>

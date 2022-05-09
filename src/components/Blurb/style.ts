@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
-export const BlurbContainer = styled.div`
-  height: 100%;
-  padding: 25px;
+export const BlurbContainer = styled.section`
+  margin: 0 0 40px 0;
   a {
     color: ${({ theme }) => theme.colors.blue};
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 60px 0;
   }
 `;
 
 export const Text = styled.p`
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 `;
 
-export const Content = styled.div`
-  margin: 0 0 2.5rem 0;
-`;
+export const Content = styled.div``;

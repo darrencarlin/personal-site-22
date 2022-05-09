@@ -1,10 +1,12 @@
 import { EducationItemProps } from "types/components";
 import {
+  Bottom,
   College,
   Course,
   Date,
   EducationItemContainer,
   Location,
+  Top,
 } from "./style";
 
 const EducationItem = ({
@@ -15,10 +17,12 @@ const EducationItem = ({
 }: EducationItemProps) => {
   return (
     <EducationItemContainer>
-      <College>{college}</College>
-      <Course>{course}</Course>
-      <Location>{location}</Location>
-      <Date>{date}</Date>
+      <Top>
+        <College>{college}</College> <Date>{date}</Date>
+      </Top>
+      <Bottom>
+        <Course>{course}</Course> <Location>{location}</Location>
+      </Bottom>
     </EducationItemContainer>
   );
 };

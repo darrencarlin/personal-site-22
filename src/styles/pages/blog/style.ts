@@ -4,14 +4,13 @@ import styled from "styled-components";
 
 export const PostWrapper = styled.div`
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
 `;
 
 // index.tsx
 
 export const BlogContainer = styled.div`
-  height: 100%;
-  padding: 25px;
+  padding: 20px;
 `;
 
 export const Article = styled.article`

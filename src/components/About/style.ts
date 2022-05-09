@@ -1,4 +1,13 @@
+import Image from "next/image";
 import styled from "styled-components";
+
+export const AboutContainer = styled.div`
+  padding: 20px;
+`;
+
+export const ImageWrapper = styled.div`
+  padding: 25px;
+`;
 
 export const Avatar = styled.img`
   display: block;

@@ -1,10 +1,10 @@
+import Wrapper from "components/Wrapper";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Links } from "./style";
+import { Anchor, Links } from "./style";
 
 const Navigation = () => {
   const { asPath } = useRouter();
-  console.log(asPath);
 
   const isRoot = asPath === "/";
 
@@ -12,20 +12,14 @@ const Navigation = () => {
     <Links>
       {!isRoot && (
         <Link href="/" passHref>
-          <a>/</a>
+          <Anchor>Home</Anchor>
         </Link>
       )}
-      <Link href="/about" passHref>
-        <a>About</a>
-      </Link>
-      <Link href="/work" passHref>
-        <a>Work</a>
-      </Link>
       <Link href="/blog" passHref>
-        <a>Blog</a>
+        <Anchor>Blog</Anchor>
       </Link>
       <Link href="/contact" passHref>
-        <a>Contact</a>
+        <Anchor>Contact</Anchor>
       </Link>
     </Links>
   );
