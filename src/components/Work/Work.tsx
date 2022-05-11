@@ -7,7 +7,7 @@ import WorkItem from "./WorkItem";
 
 const Work = ({ work }: WorkProps) => {
   return (
-    <Section id="work" backgroundColor="#f9f9f9">
+    <Section id="work" backgroundColor="#323c43">
       <Wrapper maxWidth={900}>
         <SectionTitle title="Work" />
         <WorkItems>

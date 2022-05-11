@@ -102,6 +102,13 @@ const getBlurb = async (): Promise<any> => {
         text {
           json
         }
+        image {
+          title
+          description
+          url(
+            transform: { format: WEBP, quality: 100, width: 500, height: 500 }
+          )
+        }
       }
     }
   `;

@@ -16,7 +16,7 @@ export const SectionContainer = styled.section<SectionContainerProps>`
       display: block;
       width: 50px;
       padding: 0 0 10px;
-      border-bottom: 2px solid #0093af;
+      border-bottom: 2px solid ${({ theme }) => theme.colors.blue};
     }
   }
 `;

@@ -3,7 +3,14 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import Navigation from "components/Navigation";
 import Wrapper from "components/Wrapper";
 import { BlurbProps } from "types/components";
-import { BlurbContainer, Content, Text } from "./style";
+import {
+  Avatar,
+  AvatarWrapper,
+  BlurbContainer,
+  BlurbWrapper,
+  Content,
+  Text,
+} from "./style";
 
 const Blurb = ({ blurb }: BlurbProps) => {
   const {
@@ -23,8 +30,18 @@ const Blurb = ({ blurb }: BlurbProps) => {
   const options = renderOptions();
   return (
     <BlurbContainer>
-      <Wrapper maxWidth={900}>
-        <Content>{documentToReactComponents(json, options)}</Content>
+      <Wrapper maxWidth={1000}>
+        <BlurbWrapper>
+          <Content>{documentToReactComponents(json, options)}</Content>
+          <AvatarWrapper>
+            <Avatar
+              src={blurb.image.url}
+              width={200}
+              height={200}
+              objectFit="cover"
+            />
+          </AvatarWrapper>
+        </BlurbWrapper>
       </Wrapper>
     </BlurbContainer>
   );

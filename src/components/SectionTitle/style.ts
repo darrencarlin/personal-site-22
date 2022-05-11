@@ -10,7 +10,7 @@ export const SectionTitleContainer = styled.h2`
     display: block;
     width: 25px;
     padding: 0 0 10px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.text};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.white};
     transition: all 0.2s ease-in-out;
   }
 `;

@@ -7,7 +7,7 @@ import { EducationItems } from "./style";
 
 const Education = ({ education }: EducationProps) => {
   return (
-    <Section id="education">
+    <Section id="education" backgroundColor="#3a444c">
       <Wrapper maxWidth={900}>
         <SectionTitle title="Education" />
         <EducationItems>

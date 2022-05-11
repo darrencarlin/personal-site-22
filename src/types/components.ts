@@ -51,6 +51,7 @@ export interface BlurbProps {
 
 export interface BlurbItemProps {
   text: PostBody;
+  image: Image;
 }
 
 // About
