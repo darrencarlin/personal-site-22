@@ -1,6 +1,51 @@
 import Name from "../Name";
 import { ListTitle } from "../_shared/style";
-import { WorkList } from "./style";
+import { Job, Slash, StyledListItem, WorkList } from "./style";
+
+const work = [
+  {
+    date: "2021 - Present",
+    position: "Front End Engineer",
+    company: "Morning Brew",
+    companyUrl: "https://www.morningbrew.com/daily",
+  },
+  {
+    date: "2019 - 2021",
+    position: "Associate Software Engineer",
+    company: "Insight",
+    companyUrl: "https://www.insight.com/",
+  },
+  {
+    date: "2018 - 2019",
+    position: "Software Engineer Intern",
+    company: "Insight",
+    companyUrl: "https://www.insight.com/",
+  },
+  {
+    date: "2017 - 2018",
+    position: "Front End Developer",
+    company: "Central Statistics Office",
+    companyUrl: "https://www.cso.ie",
+  },
+];
+
+interface ListItemProps {
+  date: string;
+  position: string;
+  company: string;
+  companyUrl: string;
+}
+
+const ListItem = ({ date, position, company, companyUrl }: ListItemProps) => (
+  <StyledListItem>
+    <b>{date}</b>{" "}
+    <Job>
+      {" "}
+      <Slash>&nbsp;/&nbsp;</Slash> {position} @&nbsp;
+      <Name href={companyUrl} name={company} />
+    </Job>
+  </StyledListItem>
+);
 
 const WorkSection = () => {
   return (
@@ -8,22 +53,15 @@ const WorkSection = () => {
       <li>
         <ListTitle>Work</ListTitle>
       </li>
-      <li>
-        <b>2021 - Present</b> / Front End Engineer @{" "}
-        <Name href="https://www.morningbrew.com/daily" name="Morning Brew" />{" "}
-      </li>
-      <li>
-        <b>2019 - 2021</b> / Associate Software Engineer @{" "}
-        <Name href="https://www.insight.com/" name="Insight" />
-      </li>
-      <li>
-        <b>2018 - 2019</b> / Software Engineer Intern @{" "}
-        <Name href="https://www.insight.com/" name="Insight" />
-      </li>
-      <li>
-        <b>2017 - 2018</b> / Front End Developer @{" "}
-        <Name href="https://www.cso.ie" name="Central Statistics Office" />
-      </li>
+      {work.map((item, index) => (
+        <ListItem
+          key={index}
+          date={item.date}
+          position={item.position}
+          company={item.company}
+          companyUrl={item.companyUrl}
+        />
+      ))}
     </WorkList>
   );
 };
