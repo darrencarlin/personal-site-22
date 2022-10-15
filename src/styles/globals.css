@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Fira Mono", monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+body,
+body[data-mode="light"] {
+  --color-text: #111111;
+  --color-bg: #ffffff;
+  --color-link: #0074d9;
+}
+
+body[data-mode="dark"] {
+  --color-text: #ffffff;
+  --color-bg: #202124;
+  --color-link: #64b2f7;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body a {
+  color: var(--color-link);
+}
