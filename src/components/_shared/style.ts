@@ -15,9 +15,6 @@ export const Section = styled.section`
 
 export const Wrapper = styled.div`
   margin: 2.5rem 0;
-  /*  @media (min-width: 800px) {
-    margin: 5rem 0;
-  } */
 `;
 
 export const ListTitle = styled.h3`
