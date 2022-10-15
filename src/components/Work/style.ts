@@ -26,7 +26,6 @@ export const Slash = styled.span`
 `;
 
 export const Job = styled.span`
-  font-size: 0.9rem;
   @media (min-width: 800px) {
     display: flex;
     font-size: 1rem;
