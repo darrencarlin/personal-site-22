@@ -8,3 +8,27 @@ export const ProjectsList = styled.ul`
     }
   }
 `;
+
+export const ListItem = styled.li`
+  @media (min-width: 800px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const Links = styled.div`
+  display: flex;
+
+  @media (min-width: 800px) {
+  }
+`;
+
+export const GithubLink = styled.a`
+  margin: 0 0 0 0.8rem;
+  cursor: pointer;
+`;
+
+export const LiveLink = styled.a`
+  margin: 0 0 0 0.8rem;
+  cursor: pointer;
+`;
