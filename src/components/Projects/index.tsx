@@ -18,13 +18,14 @@ const projects = [
   },
   {
     name: "Workout Tracker",
-    description: "Strength training workout tracker",
+    description: "Workout Tracker, Strength training workout tracker",
     url: "https://ifyouaintshakingyouaintbaking.vercel.app/",
     githubUrl: "https://github.com/darrencarlin/exercise-tracker",
   },
   {
     name: "Discord Bot",
-    description: "Discord bot for tracking server members wordle scores",
+    description:
+      "Wordle Tracker, discord bot for tracking server members wordle scores",
     url: "",
     githubUrl: "https://github.com/darrencarlin/wordle-discord-bot",
   },
