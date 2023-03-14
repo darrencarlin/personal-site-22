@@ -26,7 +26,7 @@ const projects = [
     name: "Discord Bot",
     description:
       "Wordle Tracker, discord bot for tracking server members wordle scores",
-    url: "",
+    url: "https://www.wordlediscordbot.com/",
     githubUrl: "https://github.com/darrencarlin/wordle-discord-bot",
   },
 ];
@@ -46,11 +46,7 @@ const ProjectSection = () => {
               </LiveLink>
             )}
             {item.githubUrl && (
-              <GithubLink
-                href={item.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <GithubLink href={item.githubUrl} target="_blank" rel="noreferrer">
                 <BsGithub size="1.6em" />
               </GithubLink>
             )}
