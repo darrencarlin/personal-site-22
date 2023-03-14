@@ -4,7 +4,7 @@ import { Job, Slash, StyledListItem, WorkList } from "./style";
 
 const work = [
   {
-    date: "2021 - Present",
+    date: "2021 - 2023",
     position: "Front End Engineer",
     company: "Morning Brew",
     companyUrl: "https://www.morningbrew.com/daily",
