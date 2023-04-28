@@ -29,6 +29,12 @@ const projects = [
     url: "https://www.wordlediscordbot.com/",
     githubUrl: "https://github.com/darrencarlin/wordle-discord-bot",
   },
+  {
+    name: "Alpha Notes",
+    description: "Alpha Notes, note taking app",
+    url: "https://alpha-notes.vercel.app/",
+    githubUrl: "https://github.com/darrencarlin/notes-app",
+  },
 ];
 
 const ProjectSection = () => {
