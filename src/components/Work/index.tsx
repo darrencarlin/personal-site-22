@@ -3,6 +3,12 @@ import { ListTitle } from "../_shared/style";
 import { Job, Slash, StyledListItem, WorkList } from "./style";
 
 const work = [
+    {
+    date: "2023 - Present",
+    position: "Senior Front End Engineer",
+    company: "Barstool Sports",
+    companyUrl: "https://barstoolsports.com/",
+  },
   {
     date: "2021 - 2023",
     position: "Front End Engineer",
