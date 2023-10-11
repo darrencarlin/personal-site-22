@@ -15,18 +15,9 @@ const SEO = () => {
     "Saturday",
   ];
 
-  // get current weather via free weather api
-  const weather = async () => {
-    const response = await fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=YOUR_API_KEY"
-    );
-    const data = await response.json();
-    return data;
-  };
-
   return (
     <Head>
-      <title>It&apos;s {data[day].toString()}</title>
+      <title>{`It's ${data[day]}`}</title>
       <meta
         name="description"
         content="Personal website of web engineer Darren Carlin"

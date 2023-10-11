@@ -7,10 +7,13 @@ interface NameProps {
 }
 
 const Name = ({ href, name }: NameProps) => (
-  <Link href={href} passHref>
-    <StyledLink target="_blank" rel="noreferrer">
-      {name}
-    </StyledLink>
+  <Link
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    style={{ textDecoration: "none" }}
+  >
+    {name}
   </Link>
 );
 
