@@ -10,7 +10,7 @@ const work = [
     companyUrl: "https://fragmnt.com/",
   },
     {
-    date: "2023 - Present",
+    date: "2023 - 2023",
     position: "Senior Front End Engineer",
     company: "Barstool Sports",
     companyUrl: "https://barstoolsports.com/",
