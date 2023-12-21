@@ -29,15 +29,7 @@ const BlurbSection = () => {
         </p>
 
         <p>
-          My other interests include{" "}
-          <StyledLink
-            href="https://steamcommunity.com/id/deafvision"
-            target="_blank"
-            rel="noreferrer"
-          >
-            video games
-          </StyledLink>
-          ,{" "}
+          My other interests include video games,{" "}
           <StyledLink
             href="https://flickr.com/photos/dazftw"
             target="_blank"
