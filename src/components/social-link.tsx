@@ -3,16 +3,18 @@ import Link from "next/link";
 interface Props {
   href: string;
   name: string;
+  icon?: React.ReactNode;
 }
 
-export const SocialLink = ({ href, name }: Props) => (
+export const SocialLink = ({ href, name, icon }: Props) => (
   <Link
     href={href}
     target="_blank"
     rel="noreferrer"
     style={{ textDecoration: "none" }}
-    className="text-blue-800 dark:text-blue-500 hover:underline"
+    className="flex items-center gap-2 px-4 py-2 transition-all duration-300 border border-black rounded-full dark:border-neutral-800 dark:hover:border-neutral-600 hover:border-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-950 hover:-translate-y-1"
   >
-    {name}
+    <span>{icon}</span>
+    <span>{name}</span>
   </Link>
 );

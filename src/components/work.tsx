@@ -48,7 +48,7 @@ const work = [
 export const WorkSection = () => {
   return (
     <ul className="mb-6">
-      <li className="mb-2">
+      <li className="mb-4">
         <h2 className="text-2xl font-medium">Work</h2>
       </li>
       {work.map((item, index) => (

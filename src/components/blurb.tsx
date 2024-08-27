@@ -26,7 +26,7 @@ export const BlurbSection = () => {
             href="https://www.instagram.com/georgethewelshcorgi/"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-800 dark:text-blue-500 hover:underline"
+            className="text-blue-800 dark:text-blue-custom-dark hover:underline"
           >
             George
           </a>
@@ -38,7 +38,7 @@ export const BlurbSection = () => {
             href="https://flickr.com/photos/dazftw"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-800 dark:text-blue-500 hover:underline"
+            className="text-blue-800 dark:text-blue-custom-dark hover:underline"
           >
             photography
           </a>

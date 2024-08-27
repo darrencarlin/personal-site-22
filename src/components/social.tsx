@@ -1,32 +1,34 @@
 import { SocialLink } from "./social-link";
+import { BsGithub, BsLinkedin, BsInstagram, BsMailbox } from "react-icons/bs";
 
 export const SocialSection = () => {
   return (
-    <ul className="mb-6">
-      <li className="mb-2">
+    <div className="mb-6">
+      <div className="mb-4">
         <h2 className="text-2xl font-medium">Socials</h2>
-      </li>
-      <li>
-        -{" "}
+      </div>
+      <div className="flex flex-wrap gap-4">
         <SocialLink
           href="https://www.linkedin.com/in/darrencarlin/"
           name="LinkedIn"
+          icon={<BsLinkedin />}
         />
-      </li>
-      <li>
-        -{" "}
-        <SocialLink href="https://www.github.com/darrencarlin" name="Github" />
-      </li>
-      <li>
-        -{" "}
+        <SocialLink
+          href="https://www.github.com/darrencarlin"
+          name="Github"
+          icon={<BsGithub />}
+        />
         <SocialLink
           href="https://www.instagram.com/darrenjcarlin/"
           name="Instagram"
+          icon={<BsInstagram />}
         />
-      </li>
-      <li>
-        - <SocialLink href="mailto:darren@darrencarlin.com" name="Email" />
-      </li>
-    </ul>
+        <SocialLink
+          href="mailto:darren@darrencarlin.com"
+          name="Email"
+          icon={<BsMailbox />}
+        />
+      </div>
+    </div>
   );
 };
