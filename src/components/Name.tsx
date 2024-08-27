@@ -1,20 +1,18 @@
 import Link from "next/link";
-import { StyledLink } from "./_shared/style";
 
 interface NameProps {
   href: string;
   name: string;
 }
 
-const Name = ({ href, name }: NameProps) => (
+export const Name = ({ href, name }: NameProps) => (
   <Link
     href={href}
     target="_blank"
     rel="noreferrer"
     style={{ textDecoration: "none" }}
+    className="dark:text-blue-500 text-blue-800 hover:underline"
   >
     {name}
   </Link>
 );
-
-export default Name;

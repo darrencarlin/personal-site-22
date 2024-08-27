@@ -1,12 +1,10 @@
-import Name from "../Name";
-import { ListTitle } from "../_shared/style";
-import { SocialList } from "./style";
+import { Name } from "@/components/name";
 
-const SocialSection = () => {
+export const SocialSection = () => {
   return (
-    <SocialList>
-      <li>
-        <ListTitle>Social</ListTitle>
+    <ul className="mb-6">
+      <li className="mb-2">
+        <h2 className="text-2xl font-medium">Socials</h2>
       </li>
       <li>
         -{" "}
@@ -28,8 +26,6 @@ const SocialSection = () => {
       <li>
         - <Name href="mailto:darren@darrencarlin.com" name="Email" />
       </li>
-    </SocialList>
+    </ul>
   );
 };
-
-export default SocialSection;

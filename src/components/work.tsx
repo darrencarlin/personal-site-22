@@ -1,15 +1,19 @@
-import Name from "../Name";
-import { ListTitle } from "../_shared/style";
-import { Job, Slash, StyledListItem, WorkList } from "./style";
+import { ListItem } from "@/components/list-item";
 
 const work = [
-   {
-    date: "2023 - Present",
+  {
+    date: "2024 - Present",
+    position: "Front End Engineer",
+    company: "Pine Creek Labs",
+    companyUrl: "https://pinecreeklabs.com/",
+  },
+  {
+    date: "2023 - 2024",
     position: "Full Stack Engineer",
-    company: "Fragment Media Group",
+    company: "Fragment Media",
     companyUrl: "https://fragmnt.com/",
   },
-    {
+  {
     date: "2023 - 2023",
     position: "Senior Front End Engineer",
     company: "Barstool Sports",
@@ -41,29 +45,11 @@ const work = [
   },
 ];
 
-interface ListItemProps {
-  date: string;
-  position: string;
-  company: string;
-  companyUrl: string;
-}
-
-const ListItem = ({ date, position, company, companyUrl }: ListItemProps) => (
-  <StyledListItem>
-    <b>{date}</b>{" "}
-    <Job>
-      {" "}
-      <Slash>&nbsp;/&nbsp;</Slash> {position} @&nbsp;
-      <Name href={companyUrl} name={company} />
-    </Job>
-  </StyledListItem>
-);
-
-const WorkSection = () => {
+export const WorkSection = () => {
   return (
-    <WorkList>
-      <li>
-        <ListTitle>Work</ListTitle>
+    <ul className="mb-6">
+      <li className="mb-2">
+        <h2 className="text-2xl font-medium">Work</h2>
       </li>
       {work.map((item, index) => (
         <ListItem
@@ -74,8 +60,6 @@ const WorkSection = () => {
           companyUrl={item.companyUrl}
         />
       ))}
-    </WorkList>
+    </ul>
   );
 };
-
-export default WorkSection;
