@@ -45,7 +45,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={fira.className}>
+      <body
+        className={`${fira.className} dark:text-neutral-200 text-neutral-600`}
+      >
         <ThemeProvider attribute="class">
           <Fathom />
           <Header />
