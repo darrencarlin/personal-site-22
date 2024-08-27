@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-interface NameProps {
+interface Props {
   href: string;
   name: string;
 }
 
-export const Name = ({ href, name }: NameProps) => (
+export const SocialLink = ({ href, name }: Props) => (
   <Link
     href={href}
     target="_blank"

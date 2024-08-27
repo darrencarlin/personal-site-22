@@ -1,4 +1,4 @@
-import { Name } from "./name";
+import { SocialLink } from "./social-link";
 
 export const SocialSection = () => {
   return (
@@ -8,23 +8,24 @@ export const SocialSection = () => {
       </li>
       <li>
         -{" "}
-        <Name
+        <SocialLink
           href="https://www.linkedin.com/in/darrencarlin/"
           name="LinkedIn"
         />
       </li>
       <li>
-        - <Name href="https://www.github.com/darrencarlin" name="Github" />
+        -{" "}
+        <SocialLink href="https://www.github.com/darrencarlin" name="Github" />
       </li>
       <li>
         -{" "}
-        <Name
+        <SocialLink
           href="https://www.instagram.com/darrenjcarlin/"
           name="Instagram"
         />
       </li>
       <li>
-        - <Name href="mailto:darren@darrencarlin.com" name="Email" />
+        - <SocialLink href="mailto:darren@darrencarlin.com" name="Email" />
       </li>
     </ul>
   );
