@@ -11,6 +11,7 @@ export const Header = () => {
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
+        aria-label="Toggle dark mode"
       >
         {theme === "light" ? <BsMoon size="2em" /> : <BsSun size="2em" />}
       </button>
