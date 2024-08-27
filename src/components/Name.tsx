@@ -11,7 +11,7 @@ export const Name = ({ href, name }: NameProps) => (
     target="_blank"
     rel="noreferrer"
     style={{ textDecoration: "none" }}
-    className="dark:text-blue-500 text-blue-800 hover:underline"
+    className="text-blue-800 dark:text-blue-500 hover:underline"
   >
     {name}
   </Link>

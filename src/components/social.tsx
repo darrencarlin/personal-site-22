@@ -1,4 +1,4 @@
-import { Name } from "@/components/name";
+import { Name } from "./name";
 
 export const SocialSection = () => {
   return (
