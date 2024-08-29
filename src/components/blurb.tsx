@@ -8,7 +8,7 @@ export const BlurbSection = () => {
       <div>
         <p className="text-2xl md:text-3xl">Hi, I&apos;m Darren.</p>
         <p className="mt-4">
-          I am a front-end engineer{" "}
+          I am a software engineer{" "}
           {yearsSince2017 > 0
             ? `with ${yearsSince2017} years of experience`
             : ""}{" "}
