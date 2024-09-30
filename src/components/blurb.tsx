@@ -3,15 +3,13 @@ import avatar from "../../public/me.webp";
 
 export const BlurbSection = () => {
   const yearsSince2017 = new Date().getFullYear() - 2017;
+  const yearsSince2012 = new Date().getFullYear() - 2012;
   return (
     <div className="grid grid-cols-1 gap-y-8 md:grid-cols-[1.5fr_1fr] md:gap-x-24 md:gap-y-12 lg:grid-cols-[2fr_1fr]">
       <div>
         <p className="text-2xl md:text-3xl">Hi, I&apos;m Darren.</p>
         <p className="mt-4">
-          I am a software engineer{" "}
-          {yearsSince2017 > 0
-            ? `with ${yearsSince2017} years of experience`
-            : ""}{" "}
+          I am a software engineer with {yearsSince2017} years of experience
           focused on building web UI and user experiences with React and
           TypeScript.
         </p>
@@ -20,8 +18,8 @@ export const BlurbSection = () => {
           Ireland before moving to the US in 2018.
         </p>
         <p className="mt-4">
-          I currently live in NYC with my wife Calla and my{" "}
-          {new Date().getFullYear() - 2012} year old Pembroke Welsh Corgi{" "}
+          I currently live in NYC with my wife Calla and my {yearsSince2012}{" "}
+          year old Pembroke Welsh Corgi{" "}
           <a
             href="https://www.instagram.com/georgethewelshcorgi/"
             target="_blank"

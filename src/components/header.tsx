@@ -1,7 +1,7 @@
 "use client";
 
-import { BsMoon, BsSun } from "react-icons/bs";
 import { useTheme } from "next-themes";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();

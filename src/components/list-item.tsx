@@ -30,7 +30,7 @@ export const ListItem = ({
             href={companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:text-blue-custom-dark text-blue-800 underline"
+            className="text-blue-800 underline dark:text-blue-custom-dark"
           >
             {company}
           </a>
@@ -39,7 +39,7 @@ export const ListItem = ({
             href={collegeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:text-blue-custom-dark text-blue-800 underline"
+            className="text-blue-800 underline dark:text-blue-custom-dark"
           >
             {college}
           </a>

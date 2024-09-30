@@ -6,7 +6,7 @@ import { WorkSection } from "@/components/work";
 
 export default async function Home() {
   return (
-    <section className="px-4 mx-auto lg:max-w-5xl">
+    <section className="px-4 mx-auto mb-64 lg:max-w-5xl">
       <BlurbSection />
       <WorkSection />
       <EducationSection />
