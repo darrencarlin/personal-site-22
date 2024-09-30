@@ -1,44 +1,61 @@
 import { projects } from "@/utils/constants";
-import { BsGithub, BsLink } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { SectionTitle } from "./section-title";
-import Link from "next/link";
 
-export const ProjectSection = () => {
-  return (
-    <>
-      <SectionTitle title="Projects" />
-      <ul className="mb-6">
-        {projects.map((item, index) => (
-          <li
-            key={index}
-            className="flex flex-col gap-1 mb-2 md:gap-2 md:flex-row"
-          >
-            {item.url ? (
-              <Link href={item.url} className="font-bold underline">
-                {item.name}
-              </Link>
-            ) : (
-              <span className="font-bold">{item.name}</span>
-            )}
-            <span className="hidden md:block">/</span> {item.description}
-            <div>
-              {item.githubUrl && (
-                <a
-                  href={item.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={item.ariaLabel}
-                >
-                  <BsGithub
-                    size="1.6em"
-                    className="text-blue-800 dark:text-blue-custom-dark"
-                  />
-                </a>
-              )}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-};
+interface ProjectItem {
+  name: string;
+  url?: string;
+  description: string;
+  githubUrl?: string;
+  ariaLabel?: string;
+}
+
+const ProjectItem = ({
+  name,
+  url,
+  description,
+  githubUrl,
+  ariaLabel,
+}: ProjectItem) => (
+  <li className="flex flex-col gap-1 mb-2 md:gap-2 md:flex-row">
+    {url ? (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={url}
+        aria-label={ariaLabel || `View ${name}`}
+        className="font-bold underline"
+      >
+        {name}
+      </a>
+    ) : (
+      <span className="font-bold">{name}</span>
+    )}
+    <span className="hidden md:block">/</span>
+    <span>{description}</span>
+    {githubUrl && (
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={ariaLabel || `View ${name} on GitHub`}
+      >
+        <BsGithub
+          size={24}
+          className="text-blue-800 dark:text-blue-custom-dark"
+        />
+      </a>
+    )}
+  </li>
+);
+
+export const ProjectSection = () => (
+  <section>
+    <SectionTitle title="Projects" />
+    <ul className="mb-6">
+      {projects.map((project) => (
+        <ProjectItem key={project.name} {...project} />
+      ))}
+    </ul>
+  </section>
+);
