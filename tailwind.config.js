@@ -10,11 +10,10 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          "custom-dark": "#649fff"
+          "custom-dark": "#649fff",
         },
       },
     },
   },
-  plugins: [],
-}
-
+  plugins: [require("@tailwindcss/typography")],
+};

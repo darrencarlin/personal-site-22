@@ -7,26 +7,38 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "sanity:types": "npx sanity schema extract && npx sanity typegen generate",
     "update": "bun x npm-check-updates -ui"
   },
   "dependencies": {
+    "@portabletext/react": "^3.1.0",
+    "@sanity/code-input": "^4.1.4",
+    "@sanity/icons": "^3.4.0",
+    "@sanity/image-url": "1",
+    "@sanity/vision": "3",
     "fathom-client": "^3.7.2",
-    "next": "^14.2.13",
+    "next": "^14.2.15",
+    "next-sanity": "^9.5.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "sharp": "^0.33.5"
+    "react-syntax-highlighter": "^15.5.0",
+    "sanity": "^3.60.0",
+    "sharp": "^0.33.5",
+    "styled-components": "6"
   },
   "devDependencies": {
-    "@types/node": "22.7.4",
-    "@types/react": "18.3.10",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "22.7.5",
+    "@types/react": "18.3.11",
     "@types/react-icons": "^3.0.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "autoprefixer": "^10.4.20",
-    "eslint": "9.11.1",
-    "eslint-config-next": "14.2.13",
+    "eslint": "9.12.0",
+    "eslint-config-next": "14.2.15",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   }
 }

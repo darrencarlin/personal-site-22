@@ -2,7 +2,7 @@ import Fathom from "@/components/fathom-analytics";
 import { Header } from "@/components/header";
 import { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Fira_Mono } from "next/font/google";
+import { Fira_Mono, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -32,11 +32,22 @@ export async function generateMetadata(): Promise<Metadata> {
       "Full Stack Engineer",
       "Web Development Projects",
     ],
-    robots: "index, follow",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: false,
+      },
+    },
   };
 }
 
 const fira = Fira_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -46,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fira.className} dark:text-neutral-200 text-neutral-600`}
+        className={`${poppins.className} dark:text-neutral-200 text-neutral-600 font-light text-lg`}
       >
         <ThemeProvider attribute="class">
           <Fathom />

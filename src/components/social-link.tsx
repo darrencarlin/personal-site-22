@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PillLink } from "./pill-button";
 
 interface Props {
   href: string;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 export const SocialLink = ({ href, name, icon }: Props) => (
-  <Link
+  <PillLink
     href={href}
     target="_blank"
     rel="noreferrer"
@@ -16,5 +17,5 @@ export const SocialLink = ({ href, name, icon }: Props) => (
   >
     <span>{icon}</span>
     <span>{name}</span>
-  </Link>
+  </PillLink>
 );

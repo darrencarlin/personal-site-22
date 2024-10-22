@@ -1,5 +1,5 @@
 interface Props {
-  title: string;
+  title: string | undefined;
 }
 
 export const SectionTitle = ({ title }: Props) => {

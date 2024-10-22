@@ -1,5 +1,6 @@
 import { BlurbSection } from "@/components/blurb";
 import { EducationSection } from "@/components/education";
+import { Posts } from "@/components/posts";
 import { ProjectSection } from "@/components/projects";
 import { SocialSection } from "@/components/social";
 import { WorkSection } from "@/components/work";
@@ -12,6 +13,7 @@ export default async function Home() {
       <EducationSection />
       <ProjectSection />
       <SocialSection />
+      <Posts />
     </section>
   );
 }

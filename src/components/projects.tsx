@@ -24,7 +24,7 @@ const ProjectItem = ({
         rel="noopener noreferrer"
         href={url}
         aria-label={ariaLabel || `View ${name}`}
-        className="font-bold underline"
+        className="font-medium underline"
       >
         {name}
       </a>
