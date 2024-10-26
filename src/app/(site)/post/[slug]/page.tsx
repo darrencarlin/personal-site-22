@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
-    return notFound();
+    notFound();
   }
 
   const { title, _createdAt, body } = post;
