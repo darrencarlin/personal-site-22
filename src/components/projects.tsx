@@ -40,10 +40,7 @@ const ProjectItem = ({
         rel="noopener noreferrer"
         aria-label={ariaLabel || `View ${name} on GitHub`}
       >
-        <BsGithub
-          size={24}
-          className="text-blue-800 dark:text-blue-custom-dark"
-        />
+        <BsGithub size={24} className="text-blue-custom-dark" />
       </a>
     )}
   </li>

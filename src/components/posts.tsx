@@ -15,7 +15,7 @@ export const Posts = async () => {
           {sortedGroupedPosts.map(
             ([year, yearPosts]) =>
               yearPosts.length > 0 && (
-                <li key={year}>
+                <li key={year} className="list-none">
                   <h2 className="mb-4 text-lg font-medium underline underline-offset-4">
                     {year}
                   </h2>

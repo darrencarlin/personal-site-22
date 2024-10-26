@@ -48,14 +48,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const { title, _createdAt, body } = post;
 
   return (
-    <section className="px-4 mb-32">
-      <article className="mx-auto prose-lg dark:prose-invert max-w-[80ch]">
-        <h1 className="mb-8 text-5xl font-medium">{title}</h1>
-        <div>
-          <PortableText value={body || []} components={components} />
-        </div>
-        <PostNavigation createdAt={_createdAt} />
-      </article>
-    </section>
+    <article className="max-w-5xl p-4 mx-auto mb-32 prose-lg prose-invert">
+      <h1 className="mb-8 text-5xl font-medium">{title}</h1>
+      <div>
+        <PortableText value={body || []} components={components} />
+      </div>
+      <PostNavigation createdAt={_createdAt} />
+    </article>
   );
 }

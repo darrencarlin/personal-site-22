@@ -1,13 +1,10 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BsMoon, BsSun } from "react-icons/bs";
 
 export const Header = () => {
   const path = usePathname();
-  const { theme, setTheme } = useTheme();
 
   const isNotHome = path !== "/";
 
@@ -20,14 +17,6 @@ export const Header = () => {
           </Link>
         )}
       </div>
-      <button
-        onClick={() => {
-          setTheme(theme === "light" ? "dark" : "light");
-        }}
-        aria-label="Toggle dark mode"
-      >
-        {theme === "light" ? <BsMoon size="2em" /> : <BsSun size="2em" />}
-      </button>
     </header>
   );
 };

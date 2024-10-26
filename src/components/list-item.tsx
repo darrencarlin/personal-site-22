@@ -21,7 +21,7 @@ export const ListItem = ({
 
   return (
     <li className="flex flex-col gap-1 mb-2 md:gap-2 md:flex-row">
-      <span className="font-medium">{date}</span>
+      <span className="italic font-medium">{date}</span>
       <span className="hidden md:block">/</span>
       <span>
         {position} @{" "}
@@ -30,7 +30,7 @@ export const ListItem = ({
             href={companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-800 underline dark:text-blue-custom-dark"
+            className="underline text-blue-custom-dark"
           >
             {company}
           </a>
@@ -39,7 +39,7 @@ export const ListItem = ({
             href={collegeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-800 underline dark:text-blue-custom-dark"
+            className="underline text-blue-custom-dark"
           >
             {college}
           </a>

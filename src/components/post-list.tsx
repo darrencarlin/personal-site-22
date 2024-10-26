@@ -9,7 +9,9 @@ export const PostsList = ({ posts }: { posts: Post[] }) => (
         <Link href={`/post/${post.slug?.current}`} className="hover:underline">
           {post.title}
         </Link>
-        <span>{formatDate(post.publishedAt || "")}</span>
+        <span className="font-medium">
+          {formatDate(post.publishedAt || "")}
+        </span>
       </li>
     ))}
   </ul>

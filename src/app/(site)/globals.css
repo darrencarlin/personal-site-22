@@ -9,3 +9,10 @@ ul {
 ol {
   list-style-type: decimal !important;
 }
+
+html {
+  background-color: #121212;
+  opacity: 1;
+  background-image: radial-gradient(#282828 0.55px, #121212 0.55px);
+  background-size: 11px 11px;
+}

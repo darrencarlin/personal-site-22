@@ -1,7 +1,7 @@
 import Fathom from "@/components/fathom-analytics";
 import { Header } from "@/components/header";
 import { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
+
 import { Fira_Mono, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
@@ -57,13 +57,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.className} dark:text-neutral-200 text-neutral-600 font-light text-lg`}
+        className={`${poppins.className} font-light text-neutral-200 text-lg`}
       >
-        <ThemeProvider attribute="class">
-          <Fathom />
-          <Header />
-          <main>{children}</main>
-        </ThemeProvider>
+        <Fathom />
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );

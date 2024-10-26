@@ -5,9 +5,9 @@ export const BlurbSection = () => {
   const yearsSince2017 = new Date().getFullYear() - 2017;
   const yearsSince2012 = new Date().getFullYear() - 2012;
   return (
-    <div className="grid grid-cols-1 gap-y-8 md:grid-cols-[1.5fr_1fr] md:gap-x-24 md:gap-y-12 lg:grid-cols-[2fr_1fr]">
+    <div className="grid grid-cols-1 gap-y-8 md:grid-cols-[1.5fr_1fr] md:gap-x-24 md:gap-y-12 lg:grid-cols-[2fr_1fr] mb-8">
       <div>
-        <p className="text-2xl md:text-3xl">Hi, I&apos;m Darren.</p>
+        <p className="text-3xl md:text-4xl">Hi, I&apos;m Darren.</p>
         <p className="mt-4">
           I am a software engineer with {yearsSince2017} years of experience
           focused on building web UI and user experiences with React and
@@ -24,7 +24,7 @@ export const BlurbSection = () => {
             href="https://www.instagram.com/georgethewelshcorgi/"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-800 dark:text-blue-custom-dark hover:underline"
+            className="text-blue-custom-dark hover:underline"
           >
             George
           </a>
@@ -36,7 +36,7 @@ export const BlurbSection = () => {
             href="https://flickr.com/photos/dazftw"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-800 dark:text-blue-custom-dark hover:underline"
+            className="text-blue-custom-dark hover:underline"
           >
             photography
           </a>
