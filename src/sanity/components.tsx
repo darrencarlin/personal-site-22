@@ -9,6 +9,42 @@ import {
 } from "@/components/portable-text/headings";
 import { Normal } from "@/components/portable-text/normal";
 import { PortableTextComponents } from "next-sanity";
+import Image from "next/image";
+import { urlFor } from "./lib/image";
+
+interface SanityImage {
+  _type: "image";
+  asset: {
+    _ref: string;
+    _type: "reference";
+  };
+  alt?: string;
+  caption?: string;
+}
+
+const ImageComponent = ({ value }: { value: SanityImage }) => {
+  if (!value.asset._ref) {
+    return null;
+  }
+
+  return (
+    <figure className="my-8">
+      <Image
+        src={urlFor(value).url()}
+        alt={value.alt || "Blog post image"}
+        width={800}
+        height={500}
+        className="rounded-lg"
+        priority={false}
+      />
+      {value.caption && (
+        <figcaption className="mt-2 text-sm text-center text-gray-500">
+          {value.caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
 
 export const components: PortableTextComponents = {
   block: {
@@ -54,5 +90,6 @@ export const components: PortableTextComponents = {
   },
   types: {
     code: Code,
+    image: ImageComponent,
   },
 };
