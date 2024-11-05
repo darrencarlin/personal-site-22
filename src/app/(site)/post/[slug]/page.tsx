@@ -55,6 +55,18 @@ export default async function Page(props: { params: Params }) {
       <div>
         <PortableText value={body || []} components={components} />
       </div>
+      {/* Published Date */}
+      <time className="block mt-4 text-gray-200" dateTime={_createdAt}>
+        <span className="font-semibold text-gray-200">Published at: </span>
+        {new Date(_createdAt).toLocaleString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </time>
+
+      <hr className="my-8" />
       <PostNavigation createdAt={_createdAt} />
     </article>
   );

@@ -35,6 +35,11 @@ const ImageComponent = ({ value }: { value: SanityImage }) => {
         width={800}
         height={500}
         className="rounded-lg"
+        // These styles wouldn't work as a classname
+        style={{
+          maxHeight: "95vh",
+          objectFit: "contain",
+        }}
         priority={false}
       />
       {value.caption && (
