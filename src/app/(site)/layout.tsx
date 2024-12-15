@@ -2,8 +2,10 @@ import Fathom from "@/components/fathom-analytics";
 import { Header } from "@/components/header";
 import { Metadata } from "next";
 
-import { Fira_Mono, Poppins, Roboto } from "next/font/google";
+import { Fira_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   const day = new Date().getDay();
