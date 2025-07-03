@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-display: "DM Serif Display", "sans-serif";
+  --font-sans: "Inter", "sans-serif";
+}
 
 ul {
   list-style-type: disc !important;
