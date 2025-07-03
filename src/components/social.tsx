@@ -10,27 +10,22 @@ export const SocialSection = () => {
 				<div className="flex flex-wrap gap-4">
 					<SocialLink
 						href="https://www.linkedin.com/in/darrencarlin/"
-						name="LinkedIn"
 						icon={<BsLinkedin />}
 					/>
 					<SocialLink
 						href="https://www.github.com/darrencarlin"
-						name="Github"
 						icon={<BsGithub />}
 					/>
 					<SocialLink
 						href="https://www.instagram.com/darrenjcarlin/"
-						name="Instagram"
 						icon={<BsInstagram />}
 					/>
 					<SocialLink
 						href="https://www.twitter.com/darrenjcarlin"
-						name="X"
 						icon={<FaXTwitter />}
 					/>
 					<SocialLink
 						href="mailto:darren@darrencarlin.com"
-						name="Email"
 						icon={<BsMailbox />}
 					/>
 				</div>
