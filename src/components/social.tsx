@@ -1,14 +1,7 @@
 import { SectionTitle } from "./section-title";
 import { SocialLink } from "./social-link";
-import {
-	BsGithub,
-	BsLinkedin,
-	BsInstagram,
-	BsMailbox,
-	BsTwitter,
-	BsX,
-} from "react-icons/bs";
-
+import { BsGithub, BsLinkedin, BsInstagram, BsMailbox } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
 export const SocialSection = () => {
 	return (
 		<>
@@ -33,7 +26,7 @@ export const SocialSection = () => {
 					<SocialLink
 						href="https://www.twitter.com/darrenjcarlin"
 						name="X"
-						icon={<BsX />}
+						icon={<FaXTwitter />}
 					/>
 					<SocialLink
 						href="mailto:darren@darrencarlin.com"
