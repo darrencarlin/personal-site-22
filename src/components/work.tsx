@@ -1,22 +1,33 @@
 import { ListItem } from "@/components/list-item";
-import { work } from "@/utils/constants";
 import { SectionTitle } from "./section-title";
 
-export const WorkSection = () => {
-	return (
-		<>
-			<SectionTitle title="Work" />
-			<ul className="mb-6">
-				{work.map((item) => (
-					<ListItem
-						key={item.id}
-						date={item.date}
-						position={item.position}
-						company={item.company}
-						companyUrl={item.companyUrl}
-					/>
-				))}
-			</ul>
-		</>
-	);
+interface WorkItem {
+  date?: string | null;
+  position?: string | null;
+  company?: string | null;
+  companyUrl?: string | null;
+}
+
+interface Props {
+  items: WorkItem[];
+}
+
+export const WorkSection = ({ items }: Props) => {
+  if (!items?.length) return null;
+  return (
+    <>
+      <SectionTitle title="Work" />
+      <ul className="mb-6">
+        {items.map((item, i) => (
+          <ListItem
+            key={`${item.company}-${item.date}-${i}`}
+            date={item.date ?? ""}
+            position={item.position ?? ""}
+            company={item.company ?? undefined}
+            companyUrl={item.companyUrl ?? undefined}
+          />
+        ))}
+      </ul>
+    </>
+  );
 };

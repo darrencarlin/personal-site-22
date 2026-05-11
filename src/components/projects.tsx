@@ -1,16 +1,19 @@
-import { projects } from "@/utils/constants";
 import { BsGithub } from "react-icons/bs";
 import { SectionTitle } from "./section-title";
 
 interface ProjectItem {
-  name: string;
-  url?: string;
-  description: string;
-  githubUrl?: string;
-  ariaLabel?: string;
+  name?: string | null;
+  url?: string | null;
+  description?: string | null;
+  githubUrl?: string | null;
+  ariaLabel?: string | null;
 }
 
-const ProjectItem = ({
+interface Props {
+  items: ProjectItem[];
+}
+
+const ProjectListItem = ({
   name,
   url,
   description,
@@ -46,13 +49,16 @@ const ProjectItem = ({
   </li>
 );
 
-export const ProjectSection = () => (
-  <section>
-    <SectionTitle title="Projects" />
-    <ul className="mb-6">
-      {projects.map((project) => (
-        <ProjectItem key={project.name} {...project} />
-      ))}
-    </ul>
-  </section>
-);
+export const ProjectSection = ({ items }: Props) => {
+  if (!items?.length) return null;
+  return (
+    <section>
+      <SectionTitle title="Projects" />
+      <ul className="mb-6">
+        {items.map((project, i) => (
+          <ProjectListItem key={`${project.name}-${i}`} {...project} />
+        ))}
+      </ul>
+    </section>
+  );
+};

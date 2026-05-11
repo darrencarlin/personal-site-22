@@ -46,6 +46,13 @@ export const postType = defineType({
       name: "body",
       type: "blockContent",
     }),
+    defineField({
+      name: "seo",
+      title: "SEO Overrides",
+      description:
+        "Optional. If empty, falls back to the post's title/excerpt/keywords.",
+      type: "seo",
+    }),
   ],
 
   preview: {
