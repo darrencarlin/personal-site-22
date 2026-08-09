@@ -6,7 +6,7 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "target": "ES2017",
+    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
@@ -27,8 +27,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/global-error.jsx",
-    "src/app/global-error.jsx",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

@@ -4,6 +4,8 @@
 @theme {
   --font-display: "DM Serif Display", "sans-serif";
   --font-sans: "Inter", "sans-serif";
+
+  --color-blue-custom-dark: #649fff;
 }
 
 ul {

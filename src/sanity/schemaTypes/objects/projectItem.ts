@@ -1,4 +1,4 @@
-import { RocketIcon } from "@sanity/icons";
+import { RocketIcon } from "@sanity/icons/Rocket";
 import { defineField, defineType } from "sanity";
 
 export const projectItemType = defineType({

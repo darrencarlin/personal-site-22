@@ -1,4 +1,4 @@
-import { HomeIcon } from "@sanity/icons";
+import { HomeIcon } from "@sanity/icons/Home";
 import type { StructureResolver } from "sanity/structure";
 
 const SINGLETON_TYPES = new Set(["homePage"]);
